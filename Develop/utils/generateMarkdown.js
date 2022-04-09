@@ -23,41 +23,72 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `## License 
-${license}`
+    return `## [License](#table-of-contents)
+
+  The application is covered under the following license:
+
+  ${license}`
   } else {
     return '';
   }
 }
 
+// Function that adds license to table of contents if applicable
+function licenseTOC(license) {
+  if (license !== 'None') {
+    return `* [License](#license)
+    `;
+  } else {
+    return ' ';
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# [${data.title}](${data.repo})
 
+  ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
-
-
-  ## Description 
+  
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  ${licenseTOC(data.license)}
+  * [Contributors](#contributors)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  
+  ## [Description](#table-of-contents)
 
   ${data.description}
   
+  
+  ## [Installation](#table-of-contents)
+  
+  ${data.installation}
+  
+  ## [Usage](#table-of-contents)
+  
+  ${data.usage}
+  
   ${renderLicenseSection(renderLicenseBadge(data.license))}
   
-  ## Installation
+  ## [Contributors](#table-of-contents)
 
-
-  ## Usage 
-
-
-  ## Contributors 
-
-
-  ## Tests
-
-
-  ## Questions
-
+  ${data.contributors}
+  
+  ## [Tests](#table-of-contents)
+  
+  ${data.tests}
+  
+  ## [Questions](#table-of-contents)
+  
+  * If you have any questions please [**Email**](mailto:${data.email}) me Ü
+  * Check out more of my work at [**GitHub**](${data.github}) Ü
+  
+  
 `;
 }
 
