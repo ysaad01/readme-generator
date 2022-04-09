@@ -9,21 +9,25 @@ const questions = [
     message: "What is the title of your project? (Required)",
     type: "input",
     name: "title",
-  },
-  {
-    message: "Enter your GitHub username. (Required)",
-    type: "input",
-    name: "github",
-  },
-  {
-    message: "Enter the Github URL to your project. (Required)",
-    type: "input",
-    name: "repo",
+    validate: titleInput => {
+      if (titleInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
   {
     message: "Enter a brief description of the project. (Required)",
     type: "input",
     name: "description",
+    validate: descriptionInput => {
+      if (descriptionInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
   
   {
@@ -38,9 +42,16 @@ const questions = [
     name: "installation",
   },
   {
-    message: "How will your project be used?",
+    message: "How will your project be used? (Required)",
     type: "input",
     name: "usage",
+    validate: usageInput => {
+      if (usageInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
   {
     message: "Who contributed to this project?",
@@ -53,9 +64,40 @@ const questions = [
     name: "tests",
   },
   {
-    message: "Please provide an email address for others to reach you at with questions",
+    message: "Enter the Github URL to your project. (Required)",
     type: "input",
-    name: "questions",
+    name: "repo",
+    validate: repoInput => {
+      if (repoInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  },
+  {
+    message: "Enter your GitHub username. (Required)",
+    type: "input",
+    name: "github",
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  },
+  {
+    message: "Please provide an email address for others to reach you at with questions. (Required)",
+    type: "input",
+    name: "email",
+    validate: questionsInput => {
+      if (questionsInput) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
 ];
 
