@@ -1,4 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
@@ -15,11 +14,10 @@ function renderLicenseBadge(license) {
       return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
     
     default:
-      return ;
+      return '';
   }
 }
 
-// TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
@@ -33,7 +31,36 @@ function renderLicenseSection(license) {
   }
 }
 
-// Function that adds license to table of contents if applicable
+// Contributors, Installation, Test functions
+function installation(installation) {
+  if (installation) {
+    return `## [Installation](#table-of-contents)
+
+  ${installation}`
+  } else {
+    return '';
+  }
+}
+function contributors(contributors) {
+  if (contributors) {
+    return `## [Contributors](#table-of-contents)
+
+  ${contributors}`
+  } else {
+    return '';
+  }
+}
+function tests(tests) {
+  if (tests) {
+    return `## [Test](#table-of-contents)
+
+  ${tests}`
+  } else {
+    return '';
+  }
+}
+
+// Function that adds license, contributors, installation, and test to table of contents if applicable
 function licenseTOC(license) {
   if (license !== 'None') {
     return `* [License](#license)
@@ -42,8 +69,32 @@ function licenseTOC(license) {
     return ' ';
   }
 }
+function installationTOC(installation) {
+  if (installation === '') {
+    return ' ';
+  } else {
+    return `* [Installation](#installation)
+    `;
+  }
+}
+function contributorsTOC(contributors) {
+  if (contributors === "") {
+    return " ";
+  } else {
+    return `* [Contributors](#contributors)
+    `;
+  }
+}
+function testsTOC(tests) {
+  if (tests === "") {
+    return " ";
+  } else {
+    return `* [Tests](#tests)
+    `;
+  }
+}
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `# [${data.title}](${data.repo})
 
@@ -52,11 +103,11 @@ function generateMarkdown(data) {
   ## Table of Contents
   
   * [Description](#description)
-  * [Installation](#installation)
+  ${installationTOC(data.installation)}
   * [Usage](#usage)
   ${licenseTOC(data.license)}
-  * [Contributors](#contributors)
-  * [Tests](#tests)
+  ${contributorsTOC(data.contributors)}
+  ${testsTOC(data.tests)}
   * [Questions](#questions)
   
   
@@ -64,10 +115,7 @@ function generateMarkdown(data) {
 
   ${data.description}
   
-  
-  ## [Installation](#table-of-contents)
-  
-  ${data.installation}
+  ${installation(data.installation)}
   
   ## [Usage](#table-of-contents)
   
@@ -75,13 +123,9 @@ function generateMarkdown(data) {
   
   ${renderLicenseSection(renderLicenseBadge(data.license))}
   
-  ## [Contributors](#table-of-contents)
-
-  ${data.contributors}
+  ${contributors(data.contributors)}
   
-  ## [Tests](#table-of-contents)
-  
-  ${data.tests}
+  ${tests(data.tests)}
   
   ## [Questions](#table-of-contents)
   
