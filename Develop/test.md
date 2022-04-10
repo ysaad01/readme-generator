@@ -1,4 +1,4 @@
-# [README Generator](https://github.com/ysaad01/readme-generator)
+# [README Generator ](https://github.com/ysaad01/readme-generator)
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,7 +21,7 @@
   
   ## [Installation](#table-of-contents)
   
-  1. Clone repository to local environment  2. Run npm install to install dependencies (inquirer, fs)
+  1. Clone repository to local environment 2. Run npm install to install dependencies (inquirer, fs)
   
   ## [Usage](#table-of-contents)
   

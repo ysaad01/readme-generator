@@ -29,7 +29,6 @@ const questions = [
       }
     }
   },
-  
   {
     message: "What type of license, if any, is this project using?",
     type: "list",
@@ -91,8 +90,8 @@ const questions = [
     message: "Please provide an email address for others to reach you at with questions. (Required)",
     type: "input",
     name: "email",
-    validate: questionsInput => {
-      if (questionsInput) {
+    validate: emailInput => {
+      if (emailInput) {
         return true;
       } else {
         return false;
