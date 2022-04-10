@@ -1,4 +1,4 @@
-# [README Generator ](https://github.com/ysaad01/readme-generator)
+# [README Generator](https://github.com/ysaad01/readme-generator)
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -6,26 +6,27 @@
   
   * [Description](#description)
   * [Installation](#installation)
+    
   * [Usage](#usage)
   * [License](#license)
     
-  * [Contributors](#contributors)
-  * [Tests](#tests)
+   
+   
   * [Questions](#questions)
   
   
   ## [Description](#table-of-contents)
 
-  README-generator is a command-line javascript application that utilizes the Node.js runtime environment to create high-quality README.md files. The content in which is based on responses to a series of user prompts that are captured using the NPM Inquirer package.
-  
+  A command-line application that allows users to devote more time to building projects by automatically generating a README.md after answering a series of questions.
   
   ## [Installation](#table-of-contents)
-  
-  1. Clone repository to local environment 2. Run npm install to install dependencies (inquirer, fs)
+  <br>1. Make sure you have node.js installed. <br> 2. Clone the repository to your local machine. <br> 3. Run the command "npm install". <br> 4. Run "node index.js". <br> 5. Answer a series of questions. <br> 6. View generatedReadMe.md in the app folder.
   
   ## [Usage](#table-of-contents)
   
-  This application will be used as a form template to create high-quality customized README files.
+  This application can be used to generate a formatted README that one can use on every project for speed and consistency.
+
+  [Click Here to Watch a Walk Through of the Generator](https://drive.google.com/file/d/16UdmAxQVrnEgZWQhFlVscsc9Bxsojhpj/view)
   
   ## [License](#table-of-contents)
 
@@ -33,13 +34,9 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
-  ## [Contributors](#table-of-contents)
-
-  N/A
   
-  ## [Tests](#table-of-contents)
   
-  N/A
+  
   
   ## [Questions](#table-of-contents)
   
