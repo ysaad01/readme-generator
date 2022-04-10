@@ -9,34 +9,35 @@ const questions = [
     message: "What is the title of your project? (Required)",
     type: "input",
     name: "title",
-    validate: titleInput => {
+    validate: (titleInput) => {
       if (titleInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
   {
     message: "Enter a brief description of the project. (Required)",
     type: "input",
     name: "description",
-    validate: descriptionInput => {
+    validate: (descriptionInput) => {
       if (descriptionInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
   {
     message: "What type of license, if any, is this project using?",
     type: "list",
     name: "license",
-    choices: ['MIT', 'Apache 2.0', 'GNU V3', 'Mozilla 2.0', 'None']
+    choices: ["MIT", "Apache 2.0", "GNU V3", "Mozilla 2.0", "None"],
   },
   {
-    message: "Please list any required packages for installation of your project.",
+    message:
+      "Please list any required packages for installation of your project. (Press enter to skip)",
     type: "input",
     name: "installation",
   },
@@ -44,21 +45,22 @@ const questions = [
     message: "How will your project be used? (Required)",
     type: "input",
     name: "usage",
-    validate: usageInput => {
+    validate: (usageInput) => {
       if (usageInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
   {
-    message: "Who contributed to this project?",
+    message: "Who contributed to this project? (Press enter to skip)",
     type: "input",
     name: "contributors",
   },
   {
-    message: "Provide any applicable test information for your project.",
+    message:
+      "Provide any applicable test information for your project. (Press enter to skip)",
     type: "input",
     name: "tests",
   },
@@ -66,37 +68,38 @@ const questions = [
     message: "Enter the Github URL to your project. (Required)",
     type: "input",
     name: "repo",
-    validate: repoInput => {
+    validate: (repoInput) => {
       if (repoInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
   {
     message: "Enter your GitHub username. (Required)",
     type: "input",
     name: "github",
-    validate: githubInput => {
+    validate: (githubInput) => {
       if (githubInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
   {
-    message: "Please provide an email address for others to reach you at with questions. (Required)",
+    message:
+      "Please provide an email address for others to reach you at with questions. (Required)",
     type: "input",
     name: "email",
-    validate: emailInput => {
+    validate: (emailInput) => {
       if (emailInput) {
         return true;
       } else {
         return false;
       }
-    }
+    },
   },
 ];
 
